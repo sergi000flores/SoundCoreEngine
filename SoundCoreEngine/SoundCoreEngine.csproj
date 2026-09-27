@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+    <RootNamespace>SoundCore</RootNamespace>
+    <AssemblyName>SoundCoreEngine</AssemblyName>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- NAudio: motor de audio administrado (WASAPI/DirectSound), no depende
+         de Windows Media Player ni de componentes COM del sistema. Soporta
+         mp3, wav, wma, aac, etc. mediante AudioFileReader. -->
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <!-- TagLibSharp: lectura de metadatos (título, artista, duración) desde
+         las etiquetas ID3/APE/etc. embebidas en el propio archivo de audio. -->
+    <PackageReference Include="TagLibSharp" Version="2.3.0" />
+  </ItemGroup>
+
+</Project>
